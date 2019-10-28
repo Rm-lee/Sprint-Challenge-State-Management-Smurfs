@@ -18,14 +18,14 @@ export function retrieveSmurf(){
  }
 }
 
-// export function push(){
-//  return (dispatch) => {
-//   axios.post('http://localhost:3333/smurfs')
-//   .then(res => {
-//    dispatch({type: RETREIVESMURF, payload: res.data})
-//   })
-//   .catch(err => {
-//    console.log(err)
-//   })
-//  }
-// }
+export function pushSmurf(smurf){
+ return (dispatch) => {
+  axios.post('http://localhost:3333/smurfs',smurf)
+  .then(res => {
+   dispatch({type: PUSHSMURF, payload: res.data})
+  })
+  .catch(err => {
+   console.log(err)
+  })
+ }
+}
