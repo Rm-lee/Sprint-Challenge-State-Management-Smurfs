@@ -18,14 +18,17 @@ function AddSmurf(props) {
    name,
    age,
    height
-  }
+  } 
+  console.log(newSmurf)
   props.pushSmurf(newSmurf)
  }
  function handleChange(e){
   const value = e.target.value
   setState({
+   ...state,
    [e.target.name]:value
   })
+ 
  }
 
  return (

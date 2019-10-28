@@ -19,6 +19,12 @@ export default function reducer(state = initialState, action){
     smurfs: action.payload
    }
    }
+  case PUSHSMURF:{
+   return {
+    ...state,
+    smurfs: action.payload
+   }
+  }
    default:
     return{
      state
