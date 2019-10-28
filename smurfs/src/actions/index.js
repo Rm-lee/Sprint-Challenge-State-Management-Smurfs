@@ -10,7 +10,7 @@ export function retrieveSmurf(){
   axios.get('http://localhost:3333/smurfs')
   .then(res => {
    dispatch({type: RETRIEVESMURF, payload: res.data})
-   console.log(res.data)
+ 
   })
   .catch(err => {
    console.log(err)

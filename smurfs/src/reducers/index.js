@@ -16,7 +16,7 @@ export default function reducer(state = initialState, action){
   case RETRIEVESMURF:{
    return {
     ...state,
-    smurfs: [...state.smurfs, action.payload]
+    smurfs: action.payload
    }
    }
    default:
